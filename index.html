@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de contatos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="conteiner mx-auto p-4">
+    <!-- titulo da pagina  -->
+    <h1 class="text-2xl font-bold mb-4">Agenda de contatos</h1>
+
+    <!-- Mensagem de sucesso  -->
+    <div class="hidden mb-4 p-2 bg-green-200 text-green-800 rounder" id="flashMessage"></div>
+
+    <!-- Div formulario -->
+    <div class="container mx-auto p-4 max-w-sm rounded overflow-hidden shadow-lg mb-8">
+      <!-- imagens do header -->
+      <img class="w-full h-60 mb-4 rounded-xl object-cover"
+        src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0"
+        alt="agenda de contatos"
+      />
+
+      <!-- Formulario de cadastro -->
+       <form action="" class=" mb-4" id="contactForm">
+        <div class="mb-4">
+          <!-- Nome  -->
+           <label for="name" class="block text-gray-700 font-bold mb-2"
+           >Nome:</label>
+           <input type="text" name="name" id="name" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray leading-tight focus:outline-none focus:shadow-outline"
+           required
+           />
+        </div>
+        <div class="gh">
+          <!-- Telefone -->
+           <label for="phone " class="block text-gray-700 font-bold mb-2"mb-4">Telefone:</label>
+           <input type="text" name="phone" id="phone" class="shadow apperance-none border rounded w-full">
+        </div>
+        <div>
+          <!-- Email -->
+           <label for="birthdate" class=block text-gray-700 font-bold mb-2>E-Mail:</label>
+           <input type="email" name="email" id="email" class="shadow apperance-none border rounded w-full">
+        </div>
+        <div>
+          <!-- Data nacimento-->
+          <label for="birthdate" class=block text-gray-700 font-bold mb-2"
+        >data de nacimento:</label>
+          <input type="date" name="birthdate" id="birthdate" class="shadow apperance-none border rounded w-full">
+        </div>
+        <!-- Botao salvar -->
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline
+        >
+        Salvar</button>
+       </form>
+
+        
+
+         <!-- Tabela com os contatos -->
+          <table id="contactList" class="w-full rounded overflow-hidden shadow-lg"></table>
+       </form>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
